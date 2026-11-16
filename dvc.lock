@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - path: flipkart_com-ecommerce_sample.csv
+      hash: md5
+      md5: 4fafdecdbf1b75e3bcc7b1d9690f5d7e
+      size: 38134703
+    - path: train.py
+      hash: md5
+      md5: e617756c9e7a7d80227a164aece60e9b
+      size: 6319
+    outs:
+    - path: models/price_model.joblib
+      hash: md5
+      md5: 46288e2c3164f0745baee131a70e444d
+      size: 6705635
+    - path: reports/metrics.json
+      hash: md5
+      md5: 43998c79b7d7c5f75ecaf5b0fae990a9
+      size: 165
