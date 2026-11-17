@@ -1,11 +1,16 @@
+
 stages:
   train:
     cmd: python train.py
     deps:
-    - flipkart_com-ecommerce_sample.csv
-    - train.py
+      - train.py
+      - flipkart_com-ecommerce_sample.csv
+    params:
+      - train.n_estimators
+      - train.max_depth
+      - train.test_size
+      - train.random_state
     outs:
-    - models/price_model.joblib
+      - models/price_model.joblib
     metrics:
-    - reports/metrics.json:
-        cache: false
+      - reports/metrics.json

@@ -9,14 +9,20 @@ stages:
       size: 38134703
     - path: train.py
       hash: md5
-      md5: e617756c9e7a7d80227a164aece60e9b
-      size: 6319
+      md5: f8b9d57e1973e57f252103b84bc21054
+      size: 8941
+    params:
+      params.yaml:
+        train.max_depth: 6
+        train.n_estimators: 200
+        train.random_state: 42
+        train.test_size: 0.2
     outs:
     - path: models/price_model.joblib
       hash: md5
-      md5: 46288e2c3164f0745baee131a70e444d
-      size: 6705635
+      md5: 20e3f32452e6379ec8f3a11155b676fe
+      size: 1857395
     - path: reports/metrics.json
       hash: md5
-      md5: 43998c79b7d7c5f75ecaf5b0fae990a9
-      size: 165
+      md5: 6c057ae3e195037745942eadc7416f62
+      size: 212
